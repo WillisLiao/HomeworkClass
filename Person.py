@@ -1,3 +1,6 @@
+from itertools import count
+
+
 class Person:
     def __init__(self, name, id , height, weight, gender, address, email, phone ):
         self.name = name
@@ -58,6 +61,6 @@ class Person:
         self.__phone = newPhone
     @phone.getter
     def getPhone(self):
-        return self.__phone  
-    #def StudentInfo(self):
-       #print(" name:{}\n ID:{}\n height:{}\n weight:{}\n gender:{}\n address:{}\n email:{}\n phone:{}".format(self.name, self.ID, self.height, self.weight, self.gender, self.address, self.email, self.phone))
+        return self.__phone 
+
+    
