@@ -1,4 +1,5 @@
 import os
+from xml.etree.ElementTree import TreeBuilder
 newDir = 'char'
 j= 0
 for i in range(1, 20, 5):
@@ -17,6 +18,11 @@ else:
     os.mkdir(foldName2)
     print("folder {} has been created!!".format(foldName2))
 print('Done!')
+
+
+
+
+    
 name = list(input(''))
 print(name)
 for i in range(len(name)):
@@ -49,5 +55,44 @@ for i in range(len(name)):
             break
         else:
             pass
+print(data_into_list[6].split()[0])
+g=-1
+for i in range(1, 30):
+    with open("{}{}.txt".format(newDir, i), "w") as file:
+        while True:
+            
+            if str(i) in data_into_list[g].split()[0]:
+
+                file.write("{}".format(data_into_list[g].split()[1]))
+            elif str(i) not in data_into_list[g].split()[0]:
+                g+=1
+            elif g ==3317:
+                break
+            else:
+                g+=1
+                
+                
+            
+                
+
+
 print(done_list)
             
+
+
+
+
+
+#k=-1
+#for i in range(3):
+    #for n in range(10):
+     #   k+=1
+     #   with open("copy.txt", "w") as file:
+    #file.write("Your text goes here")
+       # txtName = "{}-{}{}.txt".format(newDir,i,k  )
+   # if os.path.exists(txtName):
+   #     print("{} fold is existed!".format(txtName))
+   # else:
+      #  os.mkdir(txtName)
+      #  print("folder {} has been created!!".format(txtName))
+   # print('Done!')
